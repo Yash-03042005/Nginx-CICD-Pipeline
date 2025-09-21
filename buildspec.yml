@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo "Installing NGINX"
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
+      - apt-get update
+      - apt-get install nginx -y
 
   pre_build:
     commands:
@@ -14,7 +14,7 @@ phases:
   build:
     commands:
       - echo "Build Started Successfully"
-      - sudo cp index.html /var/www/html
+      - cp index.html /var/www/html
 
   post_build:
     commands:
