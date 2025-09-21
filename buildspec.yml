@@ -6,6 +6,10 @@ phases:
       - echo "Installing NGINX"
       - sudo apt-get update
       - sudo apt-get install nginx -y
+
+  pre_build:
+    - echo "build phase started successfully"
+
   build:
     commands:
       - echo "Build Started Succesfully"
