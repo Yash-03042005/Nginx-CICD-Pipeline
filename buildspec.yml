@@ -8,16 +8,18 @@ phases:
       - sudo apt-get install nginx -y
 
   pre_build:
-    - echo "build phase started successfully"
+    commands:
+      - echo "Pre-build phase started successfully"
 
   build:
     commands:
-      - echo "Build Started Succesfully"
-      - cp index.html /var/www/html
+      - echo "Build Started Successfully"
+      - sudo cp index.html /var/www/html
+
   post_build:
     commands:
-      - echo "configuring nginx" 
-      - sudo systemctl restart nginx
+      - echo "Build finished successfully"
+      # Removed systemctl restart nginx
 
 artifacts:
   files:
